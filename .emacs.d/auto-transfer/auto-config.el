@@ -80,7 +80,7 @@
      )
     (if (= need-commit 1)
       (shell-command "git commit -q -F ~/.commit-message  && git push -u origin master")
-      (message "not commit ~.~ "))
+      (message "not commit l~.~l "))
     )
   )
 (auto-commit-config-update)
