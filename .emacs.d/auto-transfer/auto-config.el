@@ -77,7 +77,7 @@
       (shell-command "git add ~/.emacs")
        )
      
-    (setf need-commit nil)
+    (setq need-commit nil)
      )
 
     (message "need commit %d" need-commit)
