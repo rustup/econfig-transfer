@@ -15,7 +15,7 @@
 ;;------------------------------hook------------------------------
 (add-hook 'after-save-hook 'reload-emacs-config-when-save-config)
 (add-hook 'global-evil-leader-mode-hook 'evil-mode)
-(add-hook 'after-save-hooks 'auto-commit-config-update)
+;;(add-hook 'after-save-hooks 'auto-commit-config-update)
 
 
 
@@ -57,12 +57,9 @@
   
   (if (string-equal (buffer-name) "auto-config.el")
     (load "~/.emacs")
-  ())
-  )
+    ())
 
-
- (defun auto-commit-config-update()
-   (message "call commit")
+  
      (cond
       ((string-equal (buffer-name) "auto-config.el")
             (shell-command "git add ~/.emacs.d/auto-transfer/auto-config.el && git commit -q -F ~/.commit-message  && git push -u origin master")
@@ -76,7 +73,9 @@
        (shell-command "git add ~/.emacs && git commit -q -F ~/.commit-message  && git push -u origin master")
        )
       )
-   )
+  )
+
+
 (defun load-molo-theme ()
   (interactive)
   (load "~/.emacs.d/elpa/color-theme-lime/lime-theme.el"))
