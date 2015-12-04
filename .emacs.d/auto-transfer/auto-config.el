@@ -59,7 +59,7 @@
     (load "~/.emacs")
     ())
 
-  
+  ;;update online copy of config
      (cond
       ((string-equal (buffer-name) "auto-config.el")
             (shell-command "git add ~/.emacs.d/auto-transfer/auto-config.el && git commit -q -F ~/.commit-message  && git push -u origin master")
