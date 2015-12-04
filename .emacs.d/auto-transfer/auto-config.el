@@ -51,6 +51,7 @@
 (ac-config-default)
 (add-hook 'before-save-hook 'gofmt-before-save)
 (setq-default make-backup-files nil)
+(setq beacon-color "#f6f3e8")
 
 ;;------------------------------key-map------------------------------
 
