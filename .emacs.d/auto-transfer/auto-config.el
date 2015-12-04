@@ -72,7 +72,7 @@
         )
 
       ((string-equal (buffer-name) ".emacs")
-       (async-shell-command "git add ~/.emacs && git commit -q -F ~/.commit-message  && git push -u origin master") 
+       (async-shell-command "git add ~/.emacs && git commit -q -F ~/.commit-message  && git push -u origin master.") 
        )
       )
   )
