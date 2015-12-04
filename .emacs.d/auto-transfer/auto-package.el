@@ -30,7 +30,7 @@
 			      rust-mode
 			      helm
 			      beacon 
-                               ))
+                              ))
 (dolist (p my-default-packages)
   (when (not (package-installed-p p))
     (package-install p)))
