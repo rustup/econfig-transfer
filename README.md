@@ -27,5 +27,5 @@
 ```
 
 + Alt-x 输入 eval-buffer 并回车
-![eval-buffer-img] eval.png
+![eval-buffer-img](eval.png)
 + emacs 会自动下载配置文件, 下载完毕重启 emacs 会自动安装配置项
