@@ -10,6 +10,7 @@
 (ido-mode)
 (global-linum-mode)
 (global-evil-leader-mode)
+ (beacon-mode 1)
 
 
 ;;------------------------------hook------------------------------
