@@ -64,7 +64,8 @@
   (let ((need-commit 1))
     (cond
      ((string-equal (buffer-name) "auto-config.el")
-      (shell-command "git add auto-config.el")
+      ;;     (shell-command "git add auto-config.el")
+      (message "aaaaa")
        )
 
      ((string-equal (buffer-name) "auto-package.el")
