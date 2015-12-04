@@ -15,7 +15,7 @@
 ;;------------------------------hook------------------------------
 (add-hook 'after-save-hook 'reload-emacs-config-when-save-config)
 (add-hook 'global-evil-leader-mode-hook 'evil-mode)
-(add-hook 'after-save-hook 'auto-commit-config-update)
+(add-hook 'write-file-hooks 'auto-commit-config-update)
 
 ;;------------------------------settings------------------------------
 (custom-set-variables
