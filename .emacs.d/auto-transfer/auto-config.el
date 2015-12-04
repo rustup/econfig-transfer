@@ -82,7 +82,7 @@
       (message "not commit l~.~l "))
     )
   )
-(auto-commit-config-update)
+
 
 (defun load-molo-theme ()
   (interactive)
