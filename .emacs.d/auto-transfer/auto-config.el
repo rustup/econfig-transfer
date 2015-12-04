@@ -70,8 +70,7 @@
      ((string-equal (buffer-name) "auto-package.el")
       (shell-command "git add auto-package.el")
        )
-     
-
+    
      ((string-equal (buffer-name) ".emacs")
       (shell-command "git add .emacs")
        )
