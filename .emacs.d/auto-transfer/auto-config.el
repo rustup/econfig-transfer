@@ -64,20 +64,18 @@
   (let ((need-commit 1))
     (cond
      ((string-equal (buffer-name) "auto-config.el")
-      ;;     (shell-command "git add auto-config.el")
-      (message "-----------")
+           (shell-command "git add ~/.emacs.d/auto-transfer/auto-config.el")
        )
 
      ((string-equal (buffer-name) "auto-package.el")
-      (shell-command "git add auto-package.el")
+      (shell-command "git add ~/.emacs.d/auto-transfer/auto-package.el")
        )
     
      ((string-equal (buffer-name) ".emacs")
-      (shell-command "git add .emacs")
+      (shell-command "git add ~/.emacs")
        )
      
- ;    (setf need-commit nil)
-     (message "-------")
+    (setf need-commit nil)
      )
     (if (= need-commit 1)
       (shell-command "git commit -q -F ~/.commit-message  && git push -u origin master")
