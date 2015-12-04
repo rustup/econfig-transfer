@@ -21,15 +21,15 @@
 
 ;;------------------------------settings------------------------------
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by custom.
+ ;; if you edit it by hand, you could mess it up, so be careful.
+ ;; your init file should contain only one such instance.
+ ;; if there is more than one, they won't work right.
  '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes nil)
  '(custom-safe-themes (quote ("3c44eedd72c5ec5d1664e9fb828cc2f6caaa434c6cb929f454e02e8a272bbbe0" "da094437b48c936dcc342acf1a76a3b93cb818a7186360fe3f55d54588aeb453" default)))
  '(fringe-mode 0 nil (fringe))
- '(markdown-command "pandoc -s -c ~/.emacs.d/style.css --toc --highlight-style espresso -N --self-contained --data-dir=~/.emacs.d/")
+ '(markdown-command "pandoc -s -c ~/.emacs.d/style.css --toc --highlight-style espresso -n --self-contained --data-dir=~/.emacs.d/")
  '(markdown-enable-math t)
  '(scroll-bar-mode nil)
  '(send-mail-function (quote mailclient-send-it))
@@ -61,33 +61,22 @@
   )
 
 
-(defun auto-commit-config-update()
-  (message "call commit")
-  (let ((need-commit 1))
-    (cond
-     ((string-equal (buffer-name) "auto-config.el")
-           (shell-command "git add ~/.emacs.d/auto-transfer/auto-config.el")
+ (defun auto-commit-config-update()
+   (message "call commit")
+     (cond
+      ((string-equal (buffer-name) "auto-config.el")
+            (shell-command "git add ~/.emacs.d/auto-transfer/auto-config.el && git commit -q -F ~/.commit-message  && git push -u origin master")
+        )
+
+      ((string-equal (buffer-name) "auto-package.el")
+       (shell-command "git add ~/.emacs.d/auto-transfer/auto-package.el && git commit -q -F ~/.commit-message  && git push -u origin master")
+        )
+
+      ((string-equal (buffer-name) ".emacs")
+       (shell-command "git add ~/.emacs && git commit -q -F ~/.commit-message  && git push -u origin master")
        )
-
-     ((string-equal (buffer-name) "auto-package.el")
-      (shell-command "git add ~/.emacs.d/auto-transfer/auto-package.el")
-       )
-    
-     ((string-equal (buffer-name) ".emacs")
-      (shell-command "git add ~/.emacs")
-       )
-     
-    (setq need-commit nil)
-     )
-
-    (message "need commit %d" need-commit)
-    (if (= need-commit 1)
-      (shell-command "git commit -q -F ~/.commit-message  && git push -u origin master")
-      (message "not commit l~.~l~.~l"))
-    )
-  )
-
-
+      )
+   )
 (defun load-molo-theme ()
   (interactive)
   (load "~/.emacs.d/elpa/color-theme-lime/lime-theme.el"))
