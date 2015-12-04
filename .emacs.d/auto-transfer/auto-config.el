@@ -77,6 +77,7 @@
        )
      
      (setf need-commit nil)
+     (message "-------")
      )
     (if (= need-commit 1)
       (shell-command "git commit -q -F ~/.commit-message  && git push -u origin master")
