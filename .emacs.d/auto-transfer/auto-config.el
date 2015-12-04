@@ -18,6 +18,7 @@
 (add-hook 'write-file-hooks 'auto-commit-config-update)
 
 
+
 ;;------------------------------settings------------------------------
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
