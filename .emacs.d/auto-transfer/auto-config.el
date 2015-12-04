@@ -15,7 +15,7 @@
 ;;------------------------------hook------------------------------
 (add-hook 'after-save-hook 'reload-emacs-config-when-save-config)
 (add-hook 'global-evil-leader-mode-hook 'evil-mode)
-
+(add-hook 'before-save-hook 'auto-commit-config-update)
 
 ;;------------------------------settings------------------------------
 (custom-set-variables
@@ -52,11 +52,38 @@
 ;;------------------------------key-map------------------------------
 
 (defun reload-emacs-config-when-save-config ()
+  
   (if (string-equal (buffer-name) "auto-config.el")
     (load "~/.emacs")
   ())
   )
 
+
+(defun auto-commit-config-update()
+  (message "call commit")
+  (let ((need-commit 1))
+    (cond
+     ((string-equal (buffer-name) "auto-config.el")
+      (shell-command "git add auto-config.el")
+       )
+
+     ((string-equal (buffer-name) "auto-package.el")
+      (shell-command "git add auto-package.el")
+       )
+     
+
+     ((string-equal (buffer-name) ".emacs")
+      (shell-command "git add .emacs")
+       )
+     
+     (setf need-commit nil)
+     )
+    (if (= need-commit 1)
+      (shell-command "git commit  && git push -u origin master")
+      (message "not 0-commit"))
+    )
+  )
+(auto-commit-config-update)
 
 (defun load-molo-theme ()
   (interactive)
