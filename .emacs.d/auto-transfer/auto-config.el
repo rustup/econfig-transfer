@@ -65,6 +65,7 @@
     (cond
      ((string-equal (buffer-name) "auto-config.el")
       (shell-command "git add auto-config.el")
+      
        )
 
      ((string-equal (buffer-name) "auto-package.el")
