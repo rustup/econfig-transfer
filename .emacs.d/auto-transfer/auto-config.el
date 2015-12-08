@@ -6,7 +6,6 @@
 (require 'autopair)
 (require 'go-autocomplete)
 (require 'haskell-mode)
-(require 'key-chord)
 (helm-mode)
 (autopair-global-mode)
 (ido-mode)
