@@ -29,7 +29,8 @@
                               company
 			      rust-mode
 			      helm
-			      beacon 
+			      beacon
+			      haskell-mode 
                               ))
 (dolist (p my-default-packages)
   (when (not (package-installed-p p))
