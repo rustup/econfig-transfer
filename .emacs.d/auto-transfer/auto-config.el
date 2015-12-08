@@ -136,8 +136,8 @@ require input from user."
    "g" 'enter-evil
    "s" 'ace-jump-word-mode
 )
-(key-chord-define-global "  "     'ace-jump-mode			 )
-;;      (key-chord-define-global "hj"     'undo)
+        (key-chord-define-global "  "     'ace-jump-mode)
+      (key-chord-define-global "hj"     'undo)
 ;;      (key-chord-define-global [?h ?j]  'undo)  ; the same
 ;;      (key-chord-define-global "jk"     'dabbrev-expand)
 ;;      (key-chord-define-global "cv"     'reindent-then-newline-and-indent)
