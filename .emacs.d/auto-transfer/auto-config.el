@@ -6,6 +6,7 @@
 (require 'autopair)
 (require 'go-autocomplete)
 (require 'haskell-mode)
+(require 'key-chord)
 (helm-mode)
 (autopair-global-mode)
 (ido-mode)
@@ -135,5 +136,26 @@ require input from user."
    "g" 'enter-evil
    "s" 'ace-jump-word-mode
 )
-
+(key-chord-define-global "  "     'ace-jump-mode			 )
+;;      (key-chord-define-global "hj"     'undo)
+;;      (key-chord-define-global [?h ?j]  'undo)  ; the same
+;;      (key-chord-define-global "jk"     'dabbrev-expand)
+;;      (key-chord-define-global "cv"     'reindent-then-newline-and-indent)
+;;      (key-chord-define-global "4r"     "$")
+;;
+;; Comma and dot pressed together insert a pair of angle brackets.
+;; `h' and `j' pressed together invoke the undo command.
+;; `j' and `k' pressed together invoke the dabbrev-expand command.
+;; 'c' and 'v' pressed together insert a newline.
+;; `4' and `r' pressed together insert a dollar sign.
+;;
+;; A ONE-key chord is a single key quickly pressed twice (within one third
+;; of a second or so). 
+;;
+;; Examples:
+;;
+;;      (key-chord-define-global "''"     "`'\C-b")
+;;      (key-chord-define-global ",,"     'indent-for-comment)
+;;      (key-chord-define-global "qq"     "the ")
+;
 (provide 'auto-config)
