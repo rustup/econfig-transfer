@@ -56,6 +56,8 @@
 
 ;;------------------------------key-map------------------------------
 
+
+
 (defun reload-emacs-config-when-save-config ()
   
   (if (string-equal (buffer-name) "auto-config.el")
@@ -120,6 +122,7 @@ require input from user."
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "C-x g f" 'grep-find)
 ;;(global-set-key (kbd "C-c d") 'godoc-at-point)
 (global-set-key (kbd "C-c o") 'pop-tag-mark)
 (global-set-key (kbd "C-c C-d") 'c-man-at-point)
