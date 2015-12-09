@@ -24,7 +24,7 @@
 (mkdir "~/.emacs.d/auto-transfer")
 (curl-save "https://raw.githubusercontent.com/rustup/econfig-transfer/master/.emacs"  "~/.emacs")
 (curl-save "https://raw.githubusercontent.com/rustup/econfig-transfer/master/.emacs.d/auto-transfer/auto-config.el" "~/.emacs.d/auto-transfer/auto-config.el")
-(curl-save "https://github.com/rustup/econfig-transfer/blob/master/.emacs.d/auto-transfer/auto-package.el" "~/.emacs.d/auto-transfer/auto-package.el")
+(curl-save "https://raw.githubusercontent.com/rustup/econfig-transfer/master/.emacs.d/auto-transfer/auto-package.el" "~/.emacs.d/auto-transfer/auto-package.el")
 ```
 
 + Alt-x 输入 eval-buffer 并回车
