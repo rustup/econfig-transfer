@@ -136,6 +136,6 @@ require input from user."
    "o" 'pop-tag-mark
  ;;  "<SPC>"  'ace-jump-mode 
    "s" 'ace-jump-word-mode
-   "g" 'grep-find 
+   "g" 'find-grep
 )
 (provide 'auto-config)
