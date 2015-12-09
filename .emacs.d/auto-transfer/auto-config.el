@@ -135,7 +135,6 @@ require input from user."
    "j" 'godef-jump
    "o" 'pop-tag-mark
  ;;  "<SPC>"  'ace-jump-mode 
-
    "s" 'ace-jump-word-mode
    "g" 'grep-find 
 )
