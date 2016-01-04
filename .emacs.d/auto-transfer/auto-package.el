@@ -30,7 +30,8 @@
 			      rust-mode
 			      helm
 			      beacon
-			      haskell-mode 
+			      haskell-mode
+			      ensime 
                               ))
 (dolist (p my-default-packages)
   (when (not (package-installed-p p))
