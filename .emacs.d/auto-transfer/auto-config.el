@@ -124,7 +124,7 @@ require input from user."
 (global-set-key (kbd "C-^") 'er/expand-region)
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-(define-key company-active-map [tab] nil)
+;;(define-key company-active-map [tab] nil)
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 ;;(global-set-key  (kbd "C-x gf") 'grep-find)
 ;;(global-set-key (kbd "C-c d") 'godoc-at-point)
