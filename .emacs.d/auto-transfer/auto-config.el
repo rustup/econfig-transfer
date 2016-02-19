@@ -86,9 +86,11 @@
 
 (defun date ()
   (interactive)
-  (shell-command "date '+%Y-%m-%d %H:%M:%S'"
-   )
-  )
+ (print (shell-command "date '+%Y-%m-%d %H:%M:%S'"
+   ))
+ )
+
+
 
 (defun load-molo-theme ()
   (interactive)
