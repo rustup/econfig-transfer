@@ -82,14 +82,6 @@
       )
   )
 
-
-(defun date ()
-  (interactive)
- (print (shell-command "date '+%Y-%m-%d %H:%M:%S'"
-   ))
- )
-
-
 (defun date ()
   (interactive)
 (insert (format-time-string "%Y-%m-%e %l:%M ")) 
