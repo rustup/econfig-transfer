@@ -84,6 +84,12 @@
   )
 
 
+(defun date ()
+  (interactive)
+  (shell-command "date '+%Y-%m-%d %H:%M:%S'"
+   )
+  )
+
 (defun load-molo-theme ()
   (interactive)
   (load "~/.emacs.d/elpa/color-theme-lime/lime-theme.el"))
