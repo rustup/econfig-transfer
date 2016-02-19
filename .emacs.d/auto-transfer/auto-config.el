@@ -90,6 +90,10 @@
  )
 
 
+(defun date ()
+  (interactive)
+(insert (format-time-string "%Y-%m-%e %l:%M ")) 
+ )
 
 (defun load-molo-theme ()
   (interactive)
