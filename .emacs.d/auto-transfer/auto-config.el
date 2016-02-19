@@ -60,7 +60,6 @@
 ;;------------------------------key-map------------------------------
 
 
-
 (defun reload-emacs-config-when-save-config ()
   
   (if (string-equal (buffer-name) "auto-config.el")
