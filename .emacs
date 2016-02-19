@@ -2,7 +2,6 @@
 (require 'auto-package)
 (require 'auto-config)
 
-
 ;;(defun curl-save (url file)
 ;;  (interactive)
 ;;  (with-current-buffer (url-retrieve-synchronously  url)
